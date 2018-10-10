@@ -62,7 +62,7 @@ function collectUpdates(filteredPackages, packageGraph, execOpts, commandOptions
         node => node.prereleaseId;
 
     packages.forEach((node, name) => {
-      if (forced.has(name) || needsBump(node) || hasDiff(node)) {
+      if (forced.has(name) || /*needsBump(node) ||*/ hasDiff(node)) {
         candidates.add(node);
       }
     });
